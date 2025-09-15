@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  .form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .form-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    color: #007BFF;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-row-gap: 18px;
+    grid-column-gap: 18px;
+    align-items: center;
+  }
+  .form-label {
+    font-weight: bold;
+    color: #444;
+  }
+  .form-input,
+  .form-select,
+  .form-password {
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    background: #fafafa;
+    transition: border-color 0.2s;
+  }
+  .form-input:focus,
+  .form-password:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  .form-row-gender,
+  .form-row-hobby {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .form-actions {
+    grid-column: 1 / span 2;
+    margin-top: 18px;
+    text-align: center;
+  }
+  .submit-btn {
+    padding: 10px 24px;
+    font-size: 16px;
+    color: #fff;
+    background: #007BFF;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .submit-btn:hover {
+    background: #0056b3;
+    transform: scale(1.06);
+  }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-title">Student Registration Form</div>
+  <form>
+    <label class="form-label" for="name">Name:</label>
+    <input class="form-input" type="text" id="name" name="name" required>
+
+    <label class="form-label" for="email">Email:</label>
+    <input class="form-input" type="email" id="email" name="email" required>
+
+    <label class="form-label">Gender:</label>
+    <div class="form-row-gender">
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <label class="form-label">Hobbies:</label>
+    <div class="form-row-hobby">
+      <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+      <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+      <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+      <label><input type="checkbox" name="hobbies" value="art"> Art</label>
+    </div>
+
+    <label class="form-label" for="password">Password:</label>
+    <input class="form-password" type="password" id="password" name="password" required>
+
+    <div class="form-actions">
+      <button class="submit-btn" type="submit">Register</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

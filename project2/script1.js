@@ -38,3 +38,5 @@ document.getElementById("nextJokeBtn").addEventListener("click", async () => {
   let joke = await getJoke();
   displayJoke(joke);
 });
+
+// example code
